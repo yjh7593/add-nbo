@@ -13,7 +13,7 @@ int fread4b(char * fname){
 	fread(&read_buf, sizeof(uint32_t), 1, fp);
 	fclose(fp);
 
-	ret = htonl(read_buf);
+	ret = ntohl(read_buf);
 
 	return ret;
 }
